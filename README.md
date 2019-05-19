@@ -21,6 +21,7 @@ docker run -d --name squidanalyzer \
 -e LANG=ru_RU \
 -e TZ=Europe/Saratov \
 -e LOCALE=ru_RU \
+-e PATHLOGS=/var/log/squid/access.log \
 --volume squidanalyzer-conf:/etc/squidanalyzer \
 --volume squid-logs:/var/log/squid \
 --volume squid-full-logs:/var/www/html/squidreport \
