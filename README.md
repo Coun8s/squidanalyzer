@@ -11,7 +11,7 @@ The Squid log analyzer v. 6.6
 
 2. Start container:
 ```bash
-docker run -d --name squidanalyzer \
+sudo docker run -d --name squidanalyzer \
 --restart always \
 --net host \
 -p 8090:8090 \
@@ -27,7 +27,7 @@ docker run -d --name squidanalyzer \
 --volume squid-full-logs:/var/www/html/squidreport \
 coun/squidanalyzer:latest
 ```
-3. Add to Cron
+3. Add to Cron:
 ```bash
 00 02 * * * docker exec -ti squidanalyzer 1> /dev/null
 ```
